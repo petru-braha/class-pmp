@@ -29,3 +29,19 @@
 | **$Y=0, \theta=0.2$** | Low | Similar to Prior | $\approx 10$ |
 | **$Y=10, \theta=0.5$** | Medium | Sharp (Confident) | $\approx 18-20$ |
 | **$Y=10, \theta=0.2$** | **High** | **Wide (Uncertain)** | $\approx 25-35$ (Long tail) |
+
+### d)
+
+The Posterior Predictive distribution is always wider than the Posterior, because it accounts for the noise in the data generation process itself, not just the uncertainty in the parameter.
+
+**1. Posterior Distribution for $n$ ($P(n \mid Y)$)**
+* **What it is:** The probability distribution of the *unknown parameter* (total visitors).
+* **The Question it Answers:** "Based on the sales we observed, how many people *actually* visited the store today?"
+* **Uncertainty Source:** It reflects our uncertainty about the true value of $n$ after seeing the data.
+
+**2. Posterior Predictive Distribution ($P(Y^* \mid Y)$)**
+* **What it is:** The probability distribution of *future observable data* (future buyers).
+* **The Question it Answers:** "If we opened the store tomorrow, how many sales ($Y^*$) should we expect?"
+* **Uncertainty Source:** It incorporates **two** layers of uncertainty:
+    1.  **Parameter Uncertainty:** We don't know the true $n$ (from the Posterior above).
+    2.  **Sampling Variability:** Even if we knew $n$ perfectly, the Binomial process is random.
