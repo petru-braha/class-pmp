@@ -1,0 +1,19 @@
+(.venv) pierre@pierre:~/Documents/portfolio/class-pmp$ python3 Lab06/solution_ex1.py 
+Ex. 1 – Bayes' Theorem
+Closed-form solution:
+(a) PPV = 0.087558 (8.76%)
+(b) min specificity for PPV ≥ 50%: 0.990404 (99.04%)
+Derivation (PPV): P(B|T+) = tpr·p / [tpr·p + (1-sp)·(1-p)]
+Derivation (min sp): s ≥ 1 - [p·tpr·(1-target)] / [target·(1-p)]
+
+Empirical (Monte Carlo) solution:
+(a) Estimated PPV ≈ 0.088208 (8.82%) [Monte Carlo, n=1e6]
+(b) Estimated min specificity ≈ 0.990479 (99.05%) [empirical bisection]
+(.venv) pierre@pierre:~/Documents/portfolio/class-pmp$ python3 Lab06/solution_ex2.py 
+Ex. 2 – Poisson–Gamma
+Data: k=180 calls over T=10 hours
+Prior: Gamma(alpha0=1.0, beta0=1e-06) [rate parametrization]
+Posterior: Gamma(alpha=181.0, beta=10.000001)
+(a) Posterior mean of λ = 18.099998
+(b) 94% HDI for λ = [15.582331, 20.636263]
+(c) Posterior mode of λ = 17.999998
